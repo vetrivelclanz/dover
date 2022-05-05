@@ -1,0 +1,204 @@
+<div class="container screen">
+    <div class="head">
+       <h1>CAD Configurator</h1>
+    </div>
+    <div class="body col-12">
+        <div class="col-lg-8 col-md-8 col-">
+          <div class="row">
+           
+               <!--unit features-->
+            <div>
+             <div class="unit">
+               <h1>Unit Features</h1>
+             </div>
+             <div class="unit1">
+                 <div class="uni  col-lg-6 col-md-6 col-12">
+                   <form #myForm="ngForm" (submit)="GetData(myForm.value)">
+                    <div class="form-group my-2">
+                        <label for="Rims" class="col-sm-6">Rims</label>
+                        <input [(ngModel)]="data.Rims" name="Rims" class="col-sm-6" type="" /> 
+                      </div>
+                      <div class="form-group my-2">
+                        <label for="backsplash" class="col-sm-6">Back Splash</label>
+                        <input [(ngModel)]="data.backsplash" name="backsplash" class="col-sm-6"  />
+                      </div>
+                      <div class="form-group my-2">
+                        <label for="endsplashright" class="col-sm-6">End Splash Right</label>
+                        <input [(ngModel)]="data.endsplashright" name="endsplashright" class="col-sm-6"  />
+                      </div>
+                      <div class="form-group my-2">
+                        <label for="endsplashleft" class="col-sm-6">End Splash Left</label>
+                        <input [(ngModel)]="data.endsplashleft" name="endsplashleft" class="col-sm-6"  />
+                      </div>
+                    </form>
+                    
+                 </div>
+                 <div class="uni col-lg-6 col-md-6 col-12">
+                    <div class="form-group my-2">
+                        <label for="unitwidth" class="col-sm-6">Unit Width</label>
+                        <input [(ngModel)]="unitwidth" name="unitwidth" class="col-sm-6"  />
+                      </div>
+                      <div class="form-group my-2">
+                        <label for="unitlength" class="col-sm-6">Unit Length</label>
+                        <input [(ngModel)]="unitlength" name="unitlength" class="col-sm-6"  />
+                      </div>
+                      <div class="form-group my-2">
+                        <label for="deckheight" class="col-sm-6">Deck Height</label>
+                        <input [(ngModel)]="deckheight" name="deckheight" class="col-sm-6"  />
+                      </div>
+                 </div>
+             </div>
+            </div>
+
+            <!-- Sinks-->
+            <div>
+                <div class="unit">
+                 <div class="col-lg-5 col-md-5 front">
+                  <h1>Sinks</h1>
+                </div>
+                  <div class="col-lg-5 col-md-5 end">
+                    <select class="Services" name="Services" id="services">
+                        <option value="solidraiboard">Soli Drain Board</option>
+                        <option value="scrapsink">Scrap Sink</option>
+                        <option value="washsink">Wash sink</option>
+                        <option value="rinsesink">Rinse Sink</option>
+                        <option value="sanitizesink">Sanitize Sink</option>
+                        <option value="cleandrainboard">Clean Drain Board</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="unit1">
+                    <div class="uni col-lg-6 col-md-6 col-12">
+                       <div class="form-group my-2">
+                           <label for="scrapsinklength" class="col-sm-6">Scrap Sink Length</label>
+                           <input [(ngModel)]="scrapsinklength" name="scrapsinklength" class="col-sm-6"  />
+                         </div>
+                         <div class="form-group my-2">
+                           <label for="scrapsinkwidth" class="col-sm-6">Scrap Sink Width</label>
+                           <input [(ngModel)]="scrapsinkwidth" name="scrapsinkwidth" class="col-sm-6"  />
+                         </div>
+                        
+                    </div>
+                    <div class="uni col-lg-6 col-md-6 col-12">
+                       <div class="form-group my-2">
+                           <label for="scrapsinkdepth" class="col-sm-6">Scrap Sink Depth</label>
+                           <input [(ngModel)]="scrapsinkdepth" name="scrapsinkdepth" class="col-sm-6"  />
+                         </div>
+                         <div class="form-group my-1">
+                           <label for="scrapsinkdrainboard" class="col-sm-6">Scrap Sink Drain<br> Board</label>
+                           <input [(ngModel)]="scrapsinkdrainboard" name="scrapsinkdrainboard" class="col-sm-6"  />
+                         </div>
+                        
+                    </div>
+                </div>
+                <div class="radi ">
+                    <input type="radio" value="disposerunit"  aria-label="Radio button for following text input">
+                    <label for="disposerunit" class="my-2">Disposer Unit</label>
+                </div>
+               </div>
+              <!--Faucets-->
+              <div>
+
+                <div class="unit">
+                  <div  class="col-lg-5 col-md-5 front">
+                  <h1>Faucets</h1>
+                  </div>
+                  <div  class="col-lg-5 col-md-5 end">
+                    <select class="Services" name="Services" id="services">
+                      <option value="prerinsefaucets">Pre Rinse Faucets</option>
+                      <option value="fillfaucets">Fill Faucets</option>
+                      
+                  </select>
+                  </div>
+                </div>
+                <div class="unit1">
+                    <div class="uni col-lg-6 col-md-6 col-12 ">
+                       <div class="form-group my-2">
+                           <label for="type" class="col-sm-6">Type</label>
+                           <input [(ngModel)]="type" name="type" class="col-sm-6"  />
+                         </div>
+                       
+                        
+                    </div>
+                    <div class="uni col-lg-6 col-md-6 col-12">
+                       <div class="form-group my-2">
+                           <label for="quantity" class="col-sm-6">Quantity</label>
+                           <input [(ngModel)]="quantity" name="quantity" class="col-sm-6"  />
+                         </div>   
+                    </div>
+                </div>
+               </div>
+               <div class="text-end">
+                   <button type="submit" (click)="myForm.value" class="btn btn-primary">Assembly</button>
+               </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+            <div class="row2 ">
+                <div class="group">
+                <div class="form-group my-2">
+                    <label for="ps"class="col-12">PS-XXX</label>
+                    <input [(ngModel)]="ps" name="ps" class="col-12" />
+                  </div> 
+                 
+                  <div class="form-group my-2">
+                    <label for="voltage"class="col-12">Valtage</label>
+                    <input [(ngModel)]="voltage" name="Valtage" class="col-12" />
+                  </div>
+
+                  <div class="form-group my-2">
+                    <label for="gen"class="col-12">Gen-x</label>
+                    <input [(ngModel)]="gen" name="gen" class="col-12" />
+                  </div>
+
+                  <div class="form-group my-2">
+                    <label for="heater"class="col-12">Heater</label>
+                    <input [(ngModel)]="heater" name="heater" class="col-12" />
+                  </div>
+
+                  <div class="form-group my-2">
+                    <label for="crossrails"class="col-12">Cross Rails</label>
+                    <input [(ngModel)]="crossrails" name="crossrails" class="col-12" />
+                  </div>
+
+                  <div class="form-group my-2">
+                    <label for="foottype"class="col-12">Foot Type</label>
+                    <input [(ngModel)]="foottype" name="foottype" class="col-12" />
+                  </div>
+
+                  <div class="form-group my-2">
+                    <label for="drainballvalue"class="col-12">Drain Ball Value</label>
+                    <input [(ngModel)]="drainballvalue" name="drainballvalue" class="col-12" />
+                  </div>
+
+                  <div class="form-group my-2">
+                    <label for="dryingrack"class="col-12">Drying Rack</label>
+                    <input [(ngModel)]="dryingrack" name="dryingrack" class="col-12" />
+                  </div>
+
+                  <div class="form-group my-2">
+                    <label for="sheetpanrack"class="col-12">Sheet Pan Rack</label>
+                    <input [(ngModel)]="sheetpanrack" name="sheetpanrack" class="col-12" />
+                  </div>
+                  <!--Radio button-->
+                  <div>
+                    <input type="radio" value="utensilbasket" aria-label="Radio button for following text input">
+                    <label for="disposerunit">Utensil Basket</label>
+                </div>
+                <div>
+                    <input type="radio" value="chemicaldispenser" aria-label="Radio button for following text input">
+                    <label for="chemicaldipenser">Chemical Dipenser</label>
+                </div>
+                <div>
+                    <input type="radio" value="dualtempering" aria-label="Radio button for following text input">
+                    <label for="dualtempering">Dual Tempering</label>
+                </div>
+                <div>
+                    <input type="radio" value="specialcrating" aria-label="Radio button for following text input">
+                    <label for="specialcrating">Special Crating</label>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
